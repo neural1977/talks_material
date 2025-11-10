@@ -5044,9 +5044,22 @@
           "output_type": "display_data",
           "data": {
             "text/plain": "<IPython.core.display.HTML object>",
-            "text/html": "\n    <div>\n      \n      <progress value='6' max='50' style='width:300px; height:20px; vertical-align: middle;'></progress>\n      [ 6/50 00:00 < 00:01, 38.28 it/s]\n    </div>\n    "
+            "text/html": ""
           },
           "metadata": {}
+        },
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/plain": "           date  positive  negative  sentiment_index\n0    2020-01-01        29        65            -0.36\n1    2020-01-02        25        51            -0.26\n2    2020-01-03        25        63            -0.38\n3    2020-01-04        16        63            -0.47\n4    2020-01-05        16        66            -0.50\n..          ...       ...       ...              ...\n145  2020-05-25        20        71            -0.51\n146  2020-05-26        15        67            -0.52\n147  2020-05-27        26        53            -0.27\n148  2020-05-28        31        55            -0.24\n149  2020-05-29         8        74            -0.66\n\n[150 rows x 4 columns]",
+            "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>date</th>\n      <th>positive</th>\n      <th>negative</th>\n      <th>sentiment_index</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>0</th>\n      <td>2020-01-01</td>\n      <td>29</td>\n      <td>65</td>\n      <td>-0.36</td>\n    </tr>\n    <tr>\n      <th>1</th>\n      <td>2020-01-02</td>\n      <td>25</td>\n      <td>51</td>\n      <td>-0.26</td>\n    </tr>\n    <tr>\n      <th>2</th>\n      <td>2020-01-03</td>\n      <td>25</td>\n      <td>63</td>\n      <td>-0.38</td>\n    </tr>\n    <tr>\n      <th>3</th>\n      <td>2020-01-04</td>\n      <td>16</td>\n      <td>63</td>\n      <td>-0.47</td>\n    </tr>\n    <tr>\n      <th>4</th>\n      <td>2020-01-05</td>\n      <td>16</td>\n      <td>66</td>\n      <td>-0.50</td>\n    </tr>\n    <tr>\n      <th>...</th>\n      <td>...</td>\n      <td>...</td>\n      <td>...</td>\n      <td>...</td>\n    </tr>\n    <tr>\n      <th>145</th>\n      <td>2020-05-25</td>\n      <td>20</td>\n      <td>71</td>\n      <td>-0.51</td>\n    </tr>\n    <tr>\n      <th>146</th>\n      <td>2020-05-26</td>\n      <td>15</td>\n      <td>67</td>\n      <td>-0.52</td>\n    </tr>\n    <tr>\n      <th>147</th>\n      <td>2020-05-27</td>\n      <td>26</td>\n      <td>53</td>\n      <td>-0.27</td>\n    </tr>\n    <tr>\n      <th>148</th>\n      <td>2020-05-28</td>\n      <td>31</td>\n      <td>55</td>\n      <td>-0.24</td>\n    </tr>\n    <tr>\n      <th>149</th>\n      <td>2020-05-29</td>\n      <td>8</td>\n      <td>74</td>\n      <td>-0.66</td>\n    </tr>\n  </tbody>\n</table>\n<p>150 rows × 4 columns</p>\n</div>"
+          },
+          "metadata": {}
+        },
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": "Elapsed Sentimet Index Predictions time:  189.56587334300002\n"
         }
       ],
       "execution_count": 40,
@@ -6160,7 +6173,7 @@
         "id": "QSvEbz0mw2UK",
         "outputId": "4a1e288b-8eef-4b7d-9eff-68a40fb172be",
         "gather": {
-          "logged": 1762791981533
+          "logged": 1762795131406
         }
       }
     },
@@ -6170,11 +6183,11 @@
         "sentiment_counts_df.to_excel(\"./sentiment_index.xlsx\")"
       ],
       "outputs": [],
-      "execution_count": null,
+      "execution_count": 41,
       "metadata": {
         "id": "Dd2ICKLrDTGv",
         "gather": {
-          "logged": 1762791981576
+          "logged": 1762795132071
         }
       }
     },
@@ -6200,8 +6213,1166 @@
         "#fig.write_image(\"./sentiment_index_plot.jpeg\")\n",
         "fig.show()"
       ],
-      "outputs": [],
-      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "display_data",
+          "data": {
+            "application/vnd.plotly.v1+json": {
+              "data": [
+                {
+                  "hovertemplate": "date=%{x}<br>sentiment_index=%{y}<extra></extra>",
+                  "legendgroup": "",
+                  "line": {
+                    "color": "#636efa",
+                    "dash": "solid"
+                  },
+                  "marker": {
+                    "symbol": "circle"
+                  },
+                  "mode": "lines",
+                  "name": "",
+                  "orientation": "v",
+                  "showlegend": false,
+                  "x": [
+                    "2020-01-01",
+                    "2020-01-02",
+                    "2020-01-03",
+                    "2020-01-04",
+                    "2020-01-05",
+                    "2020-01-06",
+                    "2020-01-07",
+                    "2020-01-08",
+                    "2020-01-09",
+                    "2020-01-10",
+                    "2020-01-11",
+                    "2020-01-12",
+                    "2020-01-13",
+                    "2020-01-14",
+                    "2020-01-15",
+                    "2020-01-16",
+                    "2020-01-17",
+                    "2020-01-18",
+                    "2020-01-19",
+                    "2020-01-20",
+                    "2020-01-21",
+                    "2020-01-22",
+                    "2020-01-23",
+                    "2020-01-24",
+                    "2020-01-25",
+                    "2020-01-26",
+                    "2020-01-27",
+                    "2020-01-28",
+                    "2020-01-29",
+                    "2020-01-30",
+                    "2020-01-31",
+                    "2020-02-01",
+                    "2020-02-02",
+                    "2020-02-03",
+                    "2020-02-04",
+                    "2020-02-05",
+                    "2020-02-06",
+                    "2020-02-07",
+                    "2020-02-08",
+                    "2020-02-09",
+                    "2020-02-10",
+                    "2020-02-11",
+                    "2020-02-12",
+                    "2020-02-13",
+                    "2020-02-14",
+                    "2020-02-15",
+                    "2020-02-16",
+                    "2020-02-17",
+                    "2020-02-18",
+                    "2020-02-19",
+                    "2020-02-20",
+                    "2020-02-21",
+                    "2020-02-22",
+                    "2020-02-23",
+                    "2020-02-24",
+                    "2020-02-25",
+                    "2020-02-26",
+                    "2020-02-27",
+                    "2020-02-28",
+                    "2020-02-29",
+                    "2020-03-01",
+                    "2020-03-02",
+                    "2020-03-03",
+                    "2020-03-04",
+                    "2020-03-05",
+                    "2020-03-06",
+                    "2020-03-07",
+                    "2020-03-08",
+                    "2020-03-09",
+                    "2020-03-10",
+                    "2020-03-11",
+                    "2020-03-12",
+                    "2020-03-13",
+                    "2020-03-14",
+                    "2020-03-15",
+                    "2020-03-16",
+                    "2020-03-17",
+                    "2020-03-18",
+                    "2020-03-19",
+                    "2020-03-20",
+                    "2020-03-21",
+                    "2020-03-22",
+                    "2020-03-23",
+                    "2020-03-24",
+                    "2020-03-25",
+                    "2020-03-26",
+                    "2020-03-27",
+                    "2020-03-28",
+                    "2020-03-29",
+                    "2020-03-30",
+                    "2020-03-31",
+                    "2020-04-01",
+                    "2020-04-02",
+                    "2020-04-03",
+                    "2020-04-04",
+                    "2020-04-05",
+                    "2020-04-06",
+                    "2020-04-07",
+                    "2020-04-08",
+                    "2020-04-09",
+                    "2020-04-10",
+                    "2020-04-11",
+                    "2020-04-12",
+                    "2020-04-13",
+                    "2020-04-14",
+                    "2020-04-15",
+                    "2020-04-16",
+                    "2020-04-17",
+                    "2020-04-18",
+                    "2020-04-19",
+                    "2020-04-20",
+                    "2020-04-21",
+                    "2020-04-22",
+                    "2020-04-23",
+                    "2020-04-24",
+                    "2020-04-25",
+                    "2020-04-26",
+                    "2020-04-27",
+                    "2020-04-28",
+                    "2020-04-29",
+                    "2020-04-30",
+                    "2020-05-01",
+                    "2020-05-02",
+                    "2020-05-03",
+                    "2020-05-04",
+                    "2020-05-05",
+                    "2020-05-06",
+                    "2020-05-07",
+                    "2020-05-08",
+                    "2020-05-09",
+                    "2020-05-10",
+                    "2020-05-11",
+                    "2020-05-12",
+                    "2020-05-13",
+                    "2020-05-14",
+                    "2020-05-15",
+                    "2020-05-16",
+                    "2020-05-17",
+                    "2020-05-18",
+                    "2020-05-19",
+                    "2020-05-20",
+                    "2020-05-21",
+                    "2020-05-22",
+                    "2020-05-23",
+                    "2020-05-24",
+                    "2020-05-25",
+                    "2020-05-26",
+                    "2020-05-27",
+                    "2020-05-28",
+                    "2020-05-29"
+                  ],
+                  "xaxis": "x",
+                  "y": {
+                    "dtype": "f8",
+                    "bdata": "CtejcD0K17+kcD0K16PQv1K4HoXrUdi/FK5H4XoU3r8AAAAAAADgv+xRuB6F69G/exSuR+F61L8zMzMzMzPTv8P1KFyPwtW/CtejcD0K17+uR+F6FK7Xvz0K16NwPeK/ZmZmZmZm1r/hehSuR+HKv8P1KFyPwtW/rkfhehSu17/D9Shcj8LVvz0K16NwPdq/ZmZmZmZm1r/hehSuR+Hav83MzMzMzNy/SOF6FK5H0b/hehSuR+Hav/YoXI/C9di/rkfhehSu179SuB6F61HYvxSuR+F6FOa/mpmZmZmZ2b/NzMzMzMzcv3E9CtejcN2/7FG4HoXr4b+PwvUoXI/iv4/C9Shcj9K/CtejcD0K178pXI/C9Sjcv+F6FK5H4dq/pHA9Ctej0L8zMzMzMzPTv65H4XoUrte/w/UoXI/C1b8pXI/C9Sjkvx+F61G4HtW/pHA9Ctej4L97FK5H4XrUv5qZmZmZmdm/16NwPQrX07/NzMzMzMzcv2ZmZmZmZta/H4XrUbge1b+amZmZmZnZvwrXo3A9Cte/uB6F61G43r89CtejcD3avzMzMzMzM+O/KVyPwvUo3L/2KFyPwvXYvz0K16NwPdq/KVyPwvUo3L9cj8L1KFzfvylcj8L1KNy/hetRuB6F279mZmZmZmbWvxSuR+F6FN6/cT0K16Nw3b9xPQrXo3Ddv1yPwvUoXN+/AAAAAAAA4L/hehSuR+HKvx+F61G4HtW/9ihcj8L12L8zMzMzMzPDv+F6FK5H4dq/16NwPQrX478K16NwPQrXvz0K16NwPdq/w/UoXI/C1b/sUbgehevhv4XrUbgehdu/FK5H4XoU3r+amZmZmZnhv4XrUbgehdu/pHA9Ctej4L9I4XoUrkfRvwrXo3A9Cte/mpmZmZmZ4b/2KFyPwvXYv0jhehSuR9G/UrgehetR4L8zMzMzMzPjvz0K16NwPdq/CtejcD0K17+4HoXrUbjev2ZmZmZmZta/7FG4HoXr0b+kcD0K16PgvwAAAAAAAOC/9ihcj8L12L/Xo3A9Ctfjv/YoXI/C9eC/uB6F61G43r+4HoXrUbjev/YoXI/C9di/pHA9CtejwL9mZmZmZmbWv1K4HoXrUdi/pHA9Ctej4L/hehSuR+Hiv3sUrkfhetS/4XoUrkfh4r/sUbgehevRv+xRuB6F6+G/9ihcj8L12L+uR+F6FK7Xvx+F61G4HtW/rkfhehSu179xPQrXo3DdvxSuR+F6FN6/j8L1KFyP4r8K16NwPQrXv6RwPQrXo+C/H4XrUbge1b8pXI/C9SjMv6RwPQrXo+C/w/UoXI/C1b+F61G4HoXbv5qZmZmZmdm/UrgehetR4L8UrkfhehTevwrXo3A9Cte/j8L1KFyP0r+amZmZmZnZvylcj8L1KNy/AAAAAAAA6L8K16NwPQrXv4/C9Shcj9K/uB6F61G43r8AAAAAAADQv4XrUbgehdu/zczMzMzM3L+F61G4HoXbv8P1KFyPwtW/9ihcj8L14L8K16NwPQrHv6RwPQrXo+C/hetRuB6F479SuB6F61Hgv6RwPQrXo+C/SOF6FK5H0b+4HoXrUbjOvx+F61G4HuW/"
+                  },
+                  "yaxis": "y",
+                  "type": "scatter"
+                },
+                {
+                  "line": {
+                    "color": "red"
+                  },
+                  "mode": "lines",
+                  "name": "7-Day Rolling Average",
+                  "x": [
+                    "2020-01-01",
+                    "2020-01-02",
+                    "2020-01-03",
+                    "2020-01-04",
+                    "2020-01-05",
+                    "2020-01-06",
+                    "2020-01-07",
+                    "2020-01-08",
+                    "2020-01-09",
+                    "2020-01-10",
+                    "2020-01-11",
+                    "2020-01-12",
+                    "2020-01-13",
+                    "2020-01-14",
+                    "2020-01-15",
+                    "2020-01-16",
+                    "2020-01-17",
+                    "2020-01-18",
+                    "2020-01-19",
+                    "2020-01-20",
+                    "2020-01-21",
+                    "2020-01-22",
+                    "2020-01-23",
+                    "2020-01-24",
+                    "2020-01-25",
+                    "2020-01-26",
+                    "2020-01-27",
+                    "2020-01-28",
+                    "2020-01-29",
+                    "2020-01-30",
+                    "2020-01-31",
+                    "2020-02-01",
+                    "2020-02-02",
+                    "2020-02-03",
+                    "2020-02-04",
+                    "2020-02-05",
+                    "2020-02-06",
+                    "2020-02-07",
+                    "2020-02-08",
+                    "2020-02-09",
+                    "2020-02-10",
+                    "2020-02-11",
+                    "2020-02-12",
+                    "2020-02-13",
+                    "2020-02-14",
+                    "2020-02-15",
+                    "2020-02-16",
+                    "2020-02-17",
+                    "2020-02-18",
+                    "2020-02-19",
+                    "2020-02-20",
+                    "2020-02-21",
+                    "2020-02-22",
+                    "2020-02-23",
+                    "2020-02-24",
+                    "2020-02-25",
+                    "2020-02-26",
+                    "2020-02-27",
+                    "2020-02-28",
+                    "2020-02-29",
+                    "2020-03-01",
+                    "2020-03-02",
+                    "2020-03-03",
+                    "2020-03-04",
+                    "2020-03-05",
+                    "2020-03-06",
+                    "2020-03-07",
+                    "2020-03-08",
+                    "2020-03-09",
+                    "2020-03-10",
+                    "2020-03-11",
+                    "2020-03-12",
+                    "2020-03-13",
+                    "2020-03-14",
+                    "2020-03-15",
+                    "2020-03-16",
+                    "2020-03-17",
+                    "2020-03-18",
+                    "2020-03-19",
+                    "2020-03-20",
+                    "2020-03-21",
+                    "2020-03-22",
+                    "2020-03-23",
+                    "2020-03-24",
+                    "2020-03-25",
+                    "2020-03-26",
+                    "2020-03-27",
+                    "2020-03-28",
+                    "2020-03-29",
+                    "2020-03-30",
+                    "2020-03-31",
+                    "2020-04-01",
+                    "2020-04-02",
+                    "2020-04-03",
+                    "2020-04-04",
+                    "2020-04-05",
+                    "2020-04-06",
+                    "2020-04-07",
+                    "2020-04-08",
+                    "2020-04-09",
+                    "2020-04-10",
+                    "2020-04-11",
+                    "2020-04-12",
+                    "2020-04-13",
+                    "2020-04-14",
+                    "2020-04-15",
+                    "2020-04-16",
+                    "2020-04-17",
+                    "2020-04-18",
+                    "2020-04-19",
+                    "2020-04-20",
+                    "2020-04-21",
+                    "2020-04-22",
+                    "2020-04-23",
+                    "2020-04-24",
+                    "2020-04-25",
+                    "2020-04-26",
+                    "2020-04-27",
+                    "2020-04-28",
+                    "2020-04-29",
+                    "2020-04-30",
+                    "2020-05-01",
+                    "2020-05-02",
+                    "2020-05-03",
+                    "2020-05-04",
+                    "2020-05-05",
+                    "2020-05-06",
+                    "2020-05-07",
+                    "2020-05-08",
+                    "2020-05-09",
+                    "2020-05-10",
+                    "2020-05-11",
+                    "2020-05-12",
+                    "2020-05-13",
+                    "2020-05-14",
+                    "2020-05-15",
+                    "2020-05-16",
+                    "2020-05-17",
+                    "2020-05-18",
+                    "2020-05-19",
+                    "2020-05-20",
+                    "2020-05-21",
+                    "2020-05-22",
+                    "2020-05-23",
+                    "2020-05-24",
+                    "2020-05-25",
+                    "2020-05-26",
+                    "2020-05-27",
+                    "2020-05-28",
+                    "2020-05-29"
+                  ],
+                  "y": {
+                    "dtype": "f8",
+                    "bdata": "AAAAAAAA+H8AAAAAAAD4fwAAAAAAAPh/AAAAAAAA+H8AAAAAAAD4fwAAAAAAAPh/Wt4YwUR/179hor+T1fLWv65H4XoUrte/Wt4YwUR/17+5zy4gNpXWv15AbCoNOde/AbGpNOTc17+3bdu2bdvWv15AbCoNOde/Wt4YwUR/178HdVAHdVDXv65H4XoUrte/GcFEfyer1b+9MYKJ/k7Wv6Uh5z67gNi/ArGpNOTc179SuB6F61HYv6K/k9Xyxti/++wCYlNp2L/4iq/4iq/Yv94YwUR/J9u/jhFM9Hey2r99xVd8xVfcvyKY6O9ktdy/aRcQm0pD3r+qNOTcZxfgv12PwvUoXN+/fcVXfMVX3L8imOjvZLXcvyf6O1ktb9y/5dxnFxCb2r+ngzqogzrYv70xgon+Tta/Djn32QXE1r/zxggm+jvZv6mDOqiDOti/SZIkSZIk2b9Dzn12AbHZv+XcZxcQm9q/66AO6qAO2r815NxnFxDbv6Yh5z67gNi/piHnPruA2L+xqTTk3GfXv1h8xVd8xde/pSHnPruA2L9HMNHfyWrZvzdGMNHfydq/LyA2lYac278oXI/C9Sjcv9KQc59dQNy/IDaVhpz73L/KanljBBPdv8cIJvo7Wd2/gon+TlbL27+Kr/iKr/jav9lUGnLus9u/KVyPwvUo3L99xVd8xVfcv3vFV3zFV9y/dwGxqTTk3L/iehSuR+Hav44RTPR3stq/QGwqDTn32b+zC4hNpSHXvw4599kFxNa/q+WNEUz0179lBBP9nazWv6Uh5z67gNi/TlbLGyOY2L+V1fLGCCbavyOY6O9ktdy/c59dQGwq3b/QLiA2lYbcv3OfXUBsKt2/vuIrvuIr3r8bcu6zC4jdv9hUGnLus9u/zczMzMzM3L9/J6vljRHcv/Bktbwxgtm/PgrXo3A92r+Lr/iKr/jav9KQc59dQNy/0pBzn11A3L8vIDaVhpzbv4hNpSHnPtu/MYKJ/k5W27/btm3btm3bvzuogzqog9q/5z67gNhU2r8jmOjvZLXcv3WfXUBsKt2/Ekz0d7Ja3r+qNOTcZxfgv7W8MYKJ/t6/LiA2lYac27+ITaUh5z7bv6BdQGwqDdm/9Shcj8L12L9BbCoNOffZv6Yh5z67gNi/5z67gNhU2r/ZVBpy7rPbv8Wm0pBzn92/b9u2bdu23b9+xVd8xVfcv0BsKg0599m/kXOfXUBs2r/yxggm+jvZv4uv+Iqv+Nq/3hjBRH8n27/hehSuR+Hav9OQc59dQNy/05Bzn11A3L/hehSuR+Hav9u2bdu2bdu/PgrXo3A92r9L9HeyWt7Yv/LGCCb6O9m/SZIkSZIk2b+Qc59dQGzav9lUGnLus9u/mpmZmZmZ2b+T1fLGCCbavz4K16NwPdq/cD0K16Nw3b9/J6vljRHcv5Bzn11AbNq/hetRuB6F27/eGMFEfyfbv9u2bdu2bdu/hetRuB6F279PVssbI5jYv/vsAmJTadi/5dxnFxCb2r8Csak05NzXv+c+u4DYVNq/1vLGCCb627/QLiA2lYbcv8cIJvo7Wd2/I5jo72S13L/qoA7qoA7av7uA2FQact6/"
+                  },
+                  "type": "scatter"
+                }
+              ],
+              "layout": {
+                "template": {
+                  "data": {
+                    "histogram2dcontour": [
+                      {
+                        "type": "histogram2dcontour",
+                        "colorbar": {
+                          "outlinewidth": 0,
+                          "ticks": ""
+                        },
+                        "colorscale": [
+                          [
+                            0,
+                            "#0d0887"
+                          ],
+                          [
+                            0.1111111111111111,
+                            "#46039f"
+                          ],
+                          [
+                            0.2222222222222222,
+                            "#7201a8"
+                          ],
+                          [
+                            0.3333333333333333,
+                            "#9c179e"
+                          ],
+                          [
+                            0.4444444444444444,
+                            "#bd3786"
+                          ],
+                          [
+                            0.5555555555555556,
+                            "#d8576b"
+                          ],
+                          [
+                            0.6666666666666666,
+                            "#ed7953"
+                          ],
+                          [
+                            0.7777777777777778,
+                            "#fb9f3a"
+                          ],
+                          [
+                            0.8888888888888888,
+                            "#fdca26"
+                          ],
+                          [
+                            1,
+                            "#f0f921"
+                          ]
+                        ]
+                      }
+                    ],
+                    "choropleth": [
+                      {
+                        "type": "choropleth",
+                        "colorbar": {
+                          "outlinewidth": 0,
+                          "ticks": ""
+                        }
+                      }
+                    ],
+                    "histogram2d": [
+                      {
+                        "type": "histogram2d",
+                        "colorbar": {
+                          "outlinewidth": 0,
+                          "ticks": ""
+                        },
+                        "colorscale": [
+                          [
+                            0,
+                            "#0d0887"
+                          ],
+                          [
+                            0.1111111111111111,
+                            "#46039f"
+                          ],
+                          [
+                            0.2222222222222222,
+                            "#7201a8"
+                          ],
+                          [
+                            0.3333333333333333,
+                            "#9c179e"
+                          ],
+                          [
+                            0.4444444444444444,
+                            "#bd3786"
+                          ],
+                          [
+                            0.5555555555555556,
+                            "#d8576b"
+                          ],
+                          [
+                            0.6666666666666666,
+                            "#ed7953"
+                          ],
+                          [
+                            0.7777777777777778,
+                            "#fb9f3a"
+                          ],
+                          [
+                            0.8888888888888888,
+                            "#fdca26"
+                          ],
+                          [
+                            1,
+                            "#f0f921"
+                          ]
+                        ]
+                      }
+                    ],
+                    "heatmap": [
+                      {
+                        "type": "heatmap",
+                        "colorbar": {
+                          "outlinewidth": 0,
+                          "ticks": ""
+                        },
+                        "colorscale": [
+                          [
+                            0,
+                            "#0d0887"
+                          ],
+                          [
+                            0.1111111111111111,
+                            "#46039f"
+                          ],
+                          [
+                            0.2222222222222222,
+                            "#7201a8"
+                          ],
+                          [
+                            0.3333333333333333,
+                            "#9c179e"
+                          ],
+                          [
+                            0.4444444444444444,
+                            "#bd3786"
+                          ],
+                          [
+                            0.5555555555555556,
+                            "#d8576b"
+                          ],
+                          [
+                            0.6666666666666666,
+                            "#ed7953"
+                          ],
+                          [
+                            0.7777777777777778,
+                            "#fb9f3a"
+                          ],
+                          [
+                            0.8888888888888888,
+                            "#fdca26"
+                          ],
+                          [
+                            1,
+                            "#f0f921"
+                          ]
+                        ]
+                      }
+                    ],
+                    "contourcarpet": [
+                      {
+                        "type": "contourcarpet",
+                        "colorbar": {
+                          "outlinewidth": 0,
+                          "ticks": ""
+                        }
+                      }
+                    ],
+                    "contour": [
+                      {
+                        "type": "contour",
+                        "colorbar": {
+                          "outlinewidth": 0,
+                          "ticks": ""
+                        },
+                        "colorscale": [
+                          [
+                            0,
+                            "#0d0887"
+                          ],
+                          [
+                            0.1111111111111111,
+                            "#46039f"
+                          ],
+                          [
+                            0.2222222222222222,
+                            "#7201a8"
+                          ],
+                          [
+                            0.3333333333333333,
+                            "#9c179e"
+                          ],
+                          [
+                            0.4444444444444444,
+                            "#bd3786"
+                          ],
+                          [
+                            0.5555555555555556,
+                            "#d8576b"
+                          ],
+                          [
+                            0.6666666666666666,
+                            "#ed7953"
+                          ],
+                          [
+                            0.7777777777777778,
+                            "#fb9f3a"
+                          ],
+                          [
+                            0.8888888888888888,
+                            "#fdca26"
+                          ],
+                          [
+                            1,
+                            "#f0f921"
+                          ]
+                        ]
+                      }
+                    ],
+                    "surface": [
+                      {
+                        "type": "surface",
+                        "colorbar": {
+                          "outlinewidth": 0,
+                          "ticks": ""
+                        },
+                        "colorscale": [
+                          [
+                            0,
+                            "#0d0887"
+                          ],
+                          [
+                            0.1111111111111111,
+                            "#46039f"
+                          ],
+                          [
+                            0.2222222222222222,
+                            "#7201a8"
+                          ],
+                          [
+                            0.3333333333333333,
+                            "#9c179e"
+                          ],
+                          [
+                            0.4444444444444444,
+                            "#bd3786"
+                          ],
+                          [
+                            0.5555555555555556,
+                            "#d8576b"
+                          ],
+                          [
+                            0.6666666666666666,
+                            "#ed7953"
+                          ],
+                          [
+                            0.7777777777777778,
+                            "#fb9f3a"
+                          ],
+                          [
+                            0.8888888888888888,
+                            "#fdca26"
+                          ],
+                          [
+                            1,
+                            "#f0f921"
+                          ]
+                        ]
+                      }
+                    ],
+                    "mesh3d": [
+                      {
+                        "type": "mesh3d",
+                        "colorbar": {
+                          "outlinewidth": 0,
+                          "ticks": ""
+                        }
+                      }
+                    ],
+                    "scatter": [
+                      {
+                        "fillpattern": {
+                          "fillmode": "overlay",
+                          "size": 10,
+                          "solidity": 0.2
+                        },
+                        "type": "scatter"
+                      }
+                    ],
+                    "parcoords": [
+                      {
+                        "type": "parcoords",
+                        "line": {
+                          "colorbar": {
+                            "outlinewidth": 0,
+                            "ticks": ""
+                          }
+                        }
+                      }
+                    ],
+                    "scatterpolargl": [
+                      {
+                        "type": "scatterpolargl",
+                        "marker": {
+                          "colorbar": {
+                            "outlinewidth": 0,
+                            "ticks": ""
+                          }
+                        }
+                      }
+                    ],
+                    "bar": [
+                      {
+                        "error_x": {
+                          "color": "#2a3f5f"
+                        },
+                        "error_y": {
+                          "color": "#2a3f5f"
+                        },
+                        "marker": {
+                          "line": {
+                            "color": "#E5ECF6",
+                            "width": 0.5
+                          },
+                          "pattern": {
+                            "fillmode": "overlay",
+                            "size": 10,
+                            "solidity": 0.2
+                          }
+                        },
+                        "type": "bar"
+                      }
+                    ],
+                    "scattergeo": [
+                      {
+                        "type": "scattergeo",
+                        "marker": {
+                          "colorbar": {
+                            "outlinewidth": 0,
+                            "ticks": ""
+                          }
+                        }
+                      }
+                    ],
+                    "scatterpolar": [
+                      {
+                        "type": "scatterpolar",
+                        "marker": {
+                          "colorbar": {
+                            "outlinewidth": 0,
+                            "ticks": ""
+                          }
+                        }
+                      }
+                    ],
+                    "histogram": [
+                      {
+                        "marker": {
+                          "pattern": {
+                            "fillmode": "overlay",
+                            "size": 10,
+                            "solidity": 0.2
+                          }
+                        },
+                        "type": "histogram"
+                      }
+                    ],
+                    "scattergl": [
+                      {
+                        "type": "scattergl",
+                        "marker": {
+                          "colorbar": {
+                            "outlinewidth": 0,
+                            "ticks": ""
+                          }
+                        }
+                      }
+                    ],
+                    "scatter3d": [
+                      {
+                        "type": "scatter3d",
+                        "line": {
+                          "colorbar": {
+                            "outlinewidth": 0,
+                            "ticks": ""
+                          }
+                        },
+                        "marker": {
+                          "colorbar": {
+                            "outlinewidth": 0,
+                            "ticks": ""
+                          }
+                        }
+                      }
+                    ],
+                    "scattermap": [
+                      {
+                        "type": "scattermap",
+                        "marker": {
+                          "colorbar": {
+                            "outlinewidth": 0,
+                            "ticks": ""
+                          }
+                        }
+                      }
+                    ],
+                    "scattermapbox": [
+                      {
+                        "type": "scattermapbox",
+                        "marker": {
+                          "colorbar": {
+                            "outlinewidth": 0,
+                            "ticks": ""
+                          }
+                        }
+                      }
+                    ],
+                    "scatterternary": [
+                      {
+                        "type": "scatterternary",
+                        "marker": {
+                          "colorbar": {
+                            "outlinewidth": 0,
+                            "ticks": ""
+                          }
+                        }
+                      }
+                    ],
+                    "scattercarpet": [
+                      {
+                        "type": "scattercarpet",
+                        "marker": {
+                          "colorbar": {
+                            "outlinewidth": 0,
+                            "ticks": ""
+                          }
+                        }
+                      }
+                    ],
+                    "carpet": [
+                      {
+                        "aaxis": {
+                          "endlinecolor": "#2a3f5f",
+                          "gridcolor": "white",
+                          "linecolor": "white",
+                          "minorgridcolor": "white",
+                          "startlinecolor": "#2a3f5f"
+                        },
+                        "baxis": {
+                          "endlinecolor": "#2a3f5f",
+                          "gridcolor": "white",
+                          "linecolor": "white",
+                          "minorgridcolor": "white",
+                          "startlinecolor": "#2a3f5f"
+                        },
+                        "type": "carpet"
+                      }
+                    ],
+                    "table": [
+                      {
+                        "cells": {
+                          "fill": {
+                            "color": "#EBF0F8"
+                          },
+                          "line": {
+                            "color": "white"
+                          }
+                        },
+                        "header": {
+                          "fill": {
+                            "color": "#C8D4E3"
+                          },
+                          "line": {
+                            "color": "white"
+                          }
+                        },
+                        "type": "table"
+                      }
+                    ],
+                    "barpolar": [
+                      {
+                        "marker": {
+                          "line": {
+                            "color": "#E5ECF6",
+                            "width": 0.5
+                          },
+                          "pattern": {
+                            "fillmode": "overlay",
+                            "size": 10,
+                            "solidity": 0.2
+                          }
+                        },
+                        "type": "barpolar"
+                      }
+                    ],
+                    "pie": [
+                      {
+                        "automargin": true,
+                        "type": "pie"
+                      }
+                    ]
+                  },
+                  "layout": {
+                    "autotypenumbers": "strict",
+                    "colorway": [
+                      "#636efa",
+                      "#EF553B",
+                      "#00cc96",
+                      "#ab63fa",
+                      "#FFA15A",
+                      "#19d3f3",
+                      "#FF6692",
+                      "#B6E880",
+                      "#FF97FF",
+                      "#FECB52"
+                    ],
+                    "font": {
+                      "color": "#2a3f5f"
+                    },
+                    "hovermode": "closest",
+                    "hoverlabel": {
+                      "align": "left"
+                    },
+                    "paper_bgcolor": "white",
+                    "plot_bgcolor": "#E5ECF6",
+                    "polar": {
+                      "bgcolor": "#E5ECF6",
+                      "angularaxis": {
+                        "gridcolor": "white",
+                        "linecolor": "white",
+                        "ticks": ""
+                      },
+                      "radialaxis": {
+                        "gridcolor": "white",
+                        "linecolor": "white",
+                        "ticks": ""
+                      }
+                    },
+                    "ternary": {
+                      "bgcolor": "#E5ECF6",
+                      "aaxis": {
+                        "gridcolor": "white",
+                        "linecolor": "white",
+                        "ticks": ""
+                      },
+                      "baxis": {
+                        "gridcolor": "white",
+                        "linecolor": "white",
+                        "ticks": ""
+                      },
+                      "caxis": {
+                        "gridcolor": "white",
+                        "linecolor": "white",
+                        "ticks": ""
+                      }
+                    },
+                    "coloraxis": {
+                      "colorbar": {
+                        "outlinewidth": 0,
+                        "ticks": ""
+                      }
+                    },
+                    "colorscale": {
+                      "sequential": [
+                        [
+                          0,
+                          "#0d0887"
+                        ],
+                        [
+                          0.1111111111111111,
+                          "#46039f"
+                        ],
+                        [
+                          0.2222222222222222,
+                          "#7201a8"
+                        ],
+                        [
+                          0.3333333333333333,
+                          "#9c179e"
+                        ],
+                        [
+                          0.4444444444444444,
+                          "#bd3786"
+                        ],
+                        [
+                          0.5555555555555556,
+                          "#d8576b"
+                        ],
+                        [
+                          0.6666666666666666,
+                          "#ed7953"
+                        ],
+                        [
+                          0.7777777777777778,
+                          "#fb9f3a"
+                        ],
+                        [
+                          0.8888888888888888,
+                          "#fdca26"
+                        ],
+                        [
+                          1,
+                          "#f0f921"
+                        ]
+                      ],
+                      "sequentialminus": [
+                        [
+                          0,
+                          "#0d0887"
+                        ],
+                        [
+                          0.1111111111111111,
+                          "#46039f"
+                        ],
+                        [
+                          0.2222222222222222,
+                          "#7201a8"
+                        ],
+                        [
+                          0.3333333333333333,
+                          "#9c179e"
+                        ],
+                        [
+                          0.4444444444444444,
+                          "#bd3786"
+                        ],
+                        [
+                          0.5555555555555556,
+                          "#d8576b"
+                        ],
+                        [
+                          0.6666666666666666,
+                          "#ed7953"
+                        ],
+                        [
+                          0.7777777777777778,
+                          "#fb9f3a"
+                        ],
+                        [
+                          0.8888888888888888,
+                          "#fdca26"
+                        ],
+                        [
+                          1,
+                          "#f0f921"
+                        ]
+                      ],
+                      "diverging": [
+                        [
+                          0,
+                          "#8e0152"
+                        ],
+                        [
+                          0.1,
+                          "#c51b7d"
+                        ],
+                        [
+                          0.2,
+                          "#de77ae"
+                        ],
+                        [
+                          0.3,
+                          "#f1b6da"
+                        ],
+                        [
+                          0.4,
+                          "#fde0ef"
+                        ],
+                        [
+                          0.5,
+                          "#f7f7f7"
+                        ],
+                        [
+                          0.6,
+                          "#e6f5d0"
+                        ],
+                        [
+                          0.7,
+                          "#b8e186"
+                        ],
+                        [
+                          0.8,
+                          "#7fbc41"
+                        ],
+                        [
+                          0.9,
+                          "#4d9221"
+                        ],
+                        [
+                          1,
+                          "#276419"
+                        ]
+                      ]
+                    },
+                    "xaxis": {
+                      "gridcolor": "white",
+                      "linecolor": "white",
+                      "ticks": "",
+                      "title": {
+                        "standoff": 15
+                      },
+                      "zerolinecolor": "white",
+                      "automargin": true,
+                      "zerolinewidth": 2
+                    },
+                    "yaxis": {
+                      "gridcolor": "white",
+                      "linecolor": "white",
+                      "ticks": "",
+                      "title": {
+                        "standoff": 15
+                      },
+                      "zerolinecolor": "white",
+                      "automargin": true,
+                      "zerolinewidth": 2
+                    },
+                    "scene": {
+                      "xaxis": {
+                        "backgroundcolor": "#E5ECF6",
+                        "gridcolor": "white",
+                        "linecolor": "white",
+                        "showbackground": true,
+                        "ticks": "",
+                        "zerolinecolor": "white",
+                        "gridwidth": 2
+                      },
+                      "yaxis": {
+                        "backgroundcolor": "#E5ECF6",
+                        "gridcolor": "white",
+                        "linecolor": "white",
+                        "showbackground": true,
+                        "ticks": "",
+                        "zerolinecolor": "white",
+                        "gridwidth": 2
+                      },
+                      "zaxis": {
+                        "backgroundcolor": "#E5ECF6",
+                        "gridcolor": "white",
+                        "linecolor": "white",
+                        "showbackground": true,
+                        "ticks": "",
+                        "zerolinecolor": "white",
+                        "gridwidth": 2
+                      }
+                    },
+                    "shapedefaults": {
+                      "line": {
+                        "color": "#2a3f5f"
+                      }
+                    },
+                    "annotationdefaults": {
+                      "arrowcolor": "#2a3f5f",
+                      "arrowhead": 0,
+                      "arrowwidth": 1
+                    },
+                    "geo": {
+                      "bgcolor": "white",
+                      "landcolor": "#E5ECF6",
+                      "subunitcolor": "white",
+                      "showland": true,
+                      "showlakes": true,
+                      "lakecolor": "white"
+                    },
+                    "title": {
+                      "x": 0.05
+                    },
+                    "mapbox": {
+                      "style": "light"
+                    }
+                  }
+                },
+                "xaxis": {
+                  "anchor": "y",
+                  "domain": [
+                    0,
+                    1
+                  ],
+                  "title": {
+                    "text": "Date"
+                  },
+                  "tickformat": "%Y-%m-%d",
+                  "tickangle": 45
+                },
+                "yaxis": {
+                  "anchor": "x",
+                  "domain": [
+                    0,
+                    1
+                  ],
+                  "title": {
+                    "text": "Sentiment Index"
+                  }
+                },
+                "legend": {
+                  "tracegroupgap": 0
+                },
+                "title": {
+                  "text": "Daily Sentiment Index"
+                }
+              },
+              "config": {
+                "plotlyServerURL": "https://plot.ly"
+              }
+            }
+          },
+          "metadata": {}
+        }
+      ],
+      "execution_count": 42,
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/",
@@ -6210,7 +7381,7 @@
         "id": "XN6tnOc1AAGD",
         "outputId": "599353e6-bcf5-4d53-9632-829b54b86fc5",
         "gather": {
-          "logged": 1762791981614
+          "logged": 1762795132937
         }
       }
     },
@@ -6230,11 +7401,17 @@
         "    print(\"Removed Sentiment_Dataset.zip file.\")\n",
         "\n"
       ],
-      "outputs": [],
-      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": "Removed Sentiment_Dataset directory.\nRemoved llama3_finetuned directory.\nRemoved Sentiment_Dataset.zip file.\n"
+        }
+      ],
+      "execution_count": 43,
       "metadata": {
         "gather": {
-          "logged": 1762791981651
+          "logged": 1762795133595
         },
         "colab": {
           "base_uri": "https://localhost:8080/"
@@ -6248,8 +7425,14 @@
       "source": [
         "print(\"Global Program Execution time: \", timeit.default_timer() - start_global_time)"
       ],
-      "outputs": [],
-      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": "Global Program Execution time:  1967.1327468689997\n"
+        }
+      ],
+      "execution_count": 44,
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/"
@@ -6257,7 +7440,7 @@
         "id": "e0tav-YMS8iV",
         "outputId": "a811133e-3e3e-47bb-c4b9-d0d235e3d70b",
         "gather": {
-          "logged": 1762791981686
+          "logged": 1762795134319
         }
       }
     }
